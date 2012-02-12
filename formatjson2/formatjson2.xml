@@ -1,14 +1,12 @@
 <a:application xmlns:a="http://ajax.org/2005/aml">
     <a:window
-      id        = "winExtensionTemplate"
-      title     = "Extension Template Window"
+      id        = "winFormat"
+      title     = "Format JSON"
       center    = "true"
       modal     = "false"
       buttons   = "close"
-      skin      = "bk-window"
       kbclose   = "true"
-      class     = "relative"
-      width     = "300">
+      width     = "200">
         <a:vbox>
             <a:hbox padding="5" edge="10">
                 <a:label width="100">Indentation</a:label>
@@ -16,16 +14,11 @@
             </a:hbox>
             <a:divider />
             <a:hbox pack="end" padding="5" edge="10 10 5 10">
-                <a:button 
-                  class="ui-btn-green" 
-                  default="2" 
-                  caption="Format2"
-                  caption = "Close" 
-                  skin    = "btn-default-css3"
+                <a:button class="ui-btn-green" default="2" caption="Format" 
                   onclick = "
-                    require('ext/formatjson/formatjson').format(spIndent.value);
+                    require('ext/formatjson2/formatjson2').format(spIndent.value);
                   "/>
-                <a:button onclick="winFormat.hide()"  skin="btn-default-css3">Done</a:button>
+                <a:button onclick="winFormat.hide()">Done</a:button>
             </a:hbox>
         </a:vbox>
     </a:window>
