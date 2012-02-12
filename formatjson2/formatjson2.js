@@ -79,10 +79,10 @@ module.exports = ext.register("ext/formatjson2/formatjson2", {
         var _self = this;
         this.nodes.push(
             ide.mnuEdit.appendChild(new apf.item({
-                caption : "Format JSON",
+                caption : "Format JSON 2",
                 onclick : function(){
                     ext.initExtension(_self);
-                    _self.winExtensionTemplate.show();
+                    _self.winFormat.show();
                 }
             }))
         );
@@ -105,11 +105,9 @@ module.exports = ext.register("ext/formatjson2/formatjson2", {
             item.destroy(true, true);
         });
         this.nodes = [];
-    },
+        this.winFormat.destroy(true, true);
+    }
 
-     closeExtensionTemplateWindow : function(){
-        this.winExtensionTemplate.hide();
-     }
 });
 
 });
